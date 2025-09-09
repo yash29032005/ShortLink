@@ -20,7 +20,7 @@ const redirect = async (req, res) => {
     if (result) {
       result.click += 1;
       await result.save();
-      return res.redirect(`https://${result.redirectUrl}`);
+      return res.redirect(`${result.redirectUrl}`);
     } else {
       console.log("URL not found");
       return res.status(404).send("URL not found");
